@@ -77,7 +77,7 @@ const Hero = () => {
                 playsInline
                 className="relative w-full rounded-2xl shadow-2xl border-2 border-primary-foreground/20"
               >
-                <source src="/videos/hero-video.mp4" type="video/mp4" />
+                <source src="/midia_5.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
