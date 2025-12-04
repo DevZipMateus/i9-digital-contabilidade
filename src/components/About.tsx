@@ -57,6 +57,32 @@ const About = () => {
           ))}
         </div>
 
+        {/* Galeria do escritório */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
+            Conheça nosso escritório
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { src: '/images/escritorio-1.jpg', alt: 'Escritório I9 Contabilidade - Área de trabalho' },
+              { src: '/images/escritorio-2.jpg', alt: 'Escritório I9 Contabilidade - Sala de reuniões' },
+              { src: '/images/escritorio-3.jpg', alt: 'Escritório I9 Contabilidade - Recepção' },
+            ].map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-2xl shadow-lg group aspect-[4/5]"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-16 bg-primary rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
