@@ -29,32 +29,32 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-muted">
+    <section id="contato" className="py-12 sm:py-16 lg:py-20 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-3">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="inline-block text-secondary font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
             Contato
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Entre em contato
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg">
             Estamos prontos para atender você. Entre em contato por telefone, e-mail ou visite nosso escritório.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           <div>
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
               {contactInfo.map((info) => (
                 <div
                   key={info.title}
-                  className="bg-background p-6 rounded-xl shadow-sm"
+                  className="bg-background p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm"
                 >
-                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                    <info.icon className="w-5 h-5 text-secondary" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-secondary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                    <info.icon className="w-4 h-4 sm:w-5 sm:h-5 text-secondary" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-1">
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
                     {info.title}
                   </h3>
                   {info.href ? (
@@ -62,15 +62,15 @@ const Contact = () => {
                       href={info.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-secondary transition-colors"
+                      className="text-muted-foreground hover:text-secondary transition-colors text-xs sm:text-sm break-all"
                     >
                       {info.content}
                     </a>
                   ) : (
-                    <p className="text-muted-foreground">{info.content}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm">{info.content}</p>
                   )}
                   {info.subcontent && (
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs sm:text-sm">
                       {info.subcontent}
                     </p>
                   )}
@@ -78,32 +78,32 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="bg-background p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-foreground mb-4">
+            <div className="bg-background p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm">
+              <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">
                 Redes sociais
               </h3>
-              <div className="flex gap-4">
+              <div className="flex gap-3 sm:gap-4">
                 <a
                   href="https://instagram.com/i9contabilidade2024"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all group"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/10 rounded-lg flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all group"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-5 h-5 text-secondary group-hover:text-secondary-foreground" />
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-secondary group-hover:text-secondary-foreground" />
                 </a>
                 <a
                   href="mailto:i9contabilidade2024@hotmail.com"
-                  className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all group"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/10 rounded-lg flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all group"
                   aria-label="E-mail"
                 >
-                  <Mail className="w-5 h-5 text-secondary group-hover:text-secondary-foreground" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-secondary group-hover:text-secondary-foreground" />
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-lg h-[400px]">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg h-[280px] sm:h-[350px] lg:h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0671890843244!2d-38.48777360000001!3d-4.099568699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b8b000abc7d4bb%3A0x3af681c5c30a6013!2sRua%20Maria%20Luiza%20Noronha%2C%20322%20-%20Zumbi%2C%20Horizonte%20-%20CE%2C%2062882-020!5e0!3m2!1spt-BR!2sbr!4v1701690000000!5m2!1spt-BR!2sbr"
               width="100%"
